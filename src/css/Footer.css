@@ -1,0 +1,10 @@
+.footer-container {
+  width: 100%;
+  text-align: center;
+  background-color: purple;
+  color: orange;
+}
+
+.footer-container p {
+  font-size: 1.1rem;
+}
