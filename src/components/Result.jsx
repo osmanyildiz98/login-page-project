@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/Result.css";
 
 function Result({ resultMessage }) {
   return (
