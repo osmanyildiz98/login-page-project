@@ -90,7 +90,11 @@ function Login(props) {
     <form onSubmit={handleSubmit} className="form-container">
       <label htmlFor="email">Email</label>
       <input type="text" name="email" id="email" onChange={handleChange} />
-      {error.email && <p className="error-message">{errorMessages.email}</p>}
+      {error.email && (
+        <p id="email-error" className="error-message">
+          {errorMessages.email}
+        </p>
+      )}
       <label htmlFor="password">Password</label>
       <input
         type="password"
@@ -99,7 +103,9 @@ function Login(props) {
         onChange={handleChange}
       />
       {error.password && (
-        <p className="error-message">{errorMessages.password}</p>
+        <p id="password-error" className="error-message">
+          {errorMessages.password}
+        </p>
       )}
       <div className="checkbox-container">
         <input
@@ -115,7 +121,7 @@ function Login(props) {
           I aggre with terms and services
         </label>
       </div>
-      <button className="btn-submit" disabled={!isValid}>
+      <button id="submit-button" className="btn-submit" disabled={!isValid}>
         Submit
       </button>
     </form>
